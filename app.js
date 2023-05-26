@@ -1,5 +1,8 @@
 $(document).ready(readyNow);
 
+// ******************************************
+// ********* JQuery Introduction ********* //
+// ******************************************
 function readyNow(){
   console.log('Hello Jquery');
 
@@ -11,7 +14,7 @@ function sayHello(){
   // get the value of text input
   let userName = $('#nameInput').val();
   console.log(`Hello ${userName}`);
-  
+
   // Empy the value
   userName = $('nameInput').val('');
 
