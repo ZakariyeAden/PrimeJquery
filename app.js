@@ -1,5 +1,6 @@
+// Must Add JQ document and main function that runs!
 $(document).ready(readyNow);
-
+$(document).ready(mainReadyNow);
 // ******************************************
 // ********* JQuery Introduction ********* //
 // ******************************************
@@ -49,4 +50,39 @@ function h2MouseLeave(){
 function changeTextColor(){
   // Changes color to blue
   $(this).css('color', 'blue');
+}
+
+
+
+// ****************************
+// Tier 1 Synopsis Part 1 
+// ****************************
+
+const budget = 2500;
+let purchases = [];
+function mainReadyNow(){
+  // console.log('jq');
+  // Display budget
+  // target budgetOut and budgetIn
+  let el = $('#budgetOut');
+  el.empty();
+  el.append(budget);
+
+  $('#addPurchaseBtn').on('click', addPurchase);
+}
+
+function addPurchase(){
+  console.log('Add purchase');
+  // get user input , create a new object
+  let newPurchase = {
+    name: $('#purchaseNameIn').val(),
+    price: $('#purchasePriceIn').val()
+  }
+  // push the new purchase into the array
+  purchases.push(newPurchase);
+  // empty inputs
+   $('#purchaseNameIn').val(''),
+   $('#purchasePriceIn').val('')
+  // calculate remainingBudget
+
 }
